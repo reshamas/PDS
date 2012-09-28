@@ -19,7 +19,7 @@ for i in range(10000):
         u.addFavorite(fav_id)
         
     #a long-tailed number of friends
-    num_friends = int(round(random.lognormvariate(0, 1)))
+    num_friends = int(round(random.lognormvariate(0, 1)))%10000
 
     for i in range(num_friends):
         #long-tailed distribution on friends
