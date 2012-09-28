@@ -1,9 +1,10 @@
 import json
 
 class Shop:
-    def __init__(self, id, name, listings = dict()):
+    def __init__(self, id, name, user, listings = dict()):
         self.id = id
         self.name = name
+        self.user = user
         self.listings = listings
 
     def addListing(self, listing, quantity = 1):
