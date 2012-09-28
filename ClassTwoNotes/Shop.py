@@ -14,3 +14,7 @@ class Shop:
 
     def toJson(self):
         return json.dumps(self.__dict__)
+
+def fromJson(json_string):
+    json_map = json.loads(json_string)
+    return Shop(json_map["id"], json_map["name"], json_map["listings"])
