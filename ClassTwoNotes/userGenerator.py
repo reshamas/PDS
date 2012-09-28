@@ -11,7 +11,7 @@ for i in range(10000):
     u = user.User(id, name, email, random.choice(["male", "female", "private", ""]))
 
     #a long-tailed number of favorites
-    num_favorites = int(round(random.lognormvariate(2, 2.5)))
+    num_favorites = int(round(random.lognormvariate(0.5, 1.5)))%1000
 
     for i in range(num_favorites):
         #the actual favorites are also drawn from a long tail
@@ -19,7 +19,7 @@ for i in range(10000):
         u.addFavorite(fav_id)
         
     #a long-tailed number of friends
-    num_friends = int(round(random.lognormvariate(2, 2.5)))
+    num_friends = int(round(random.lognormvariate(0, 1)))
 
     for i in range(num_friends):
         #long-tailed distribution on friends
@@ -27,7 +27,7 @@ for i in range(10000):
         u.addFriend(friend_id)
 
     #long-tailed number of purchases
-    num_purchases = int(round(random.lognormvariate(0, 2)))
+    num_purchases = int(round(random.lognormvariate(0, .3))) - 1
 
     for i in range(num_purchases):
         purch_id = int(round(random.lognormvariate(4, 3)))%50000
