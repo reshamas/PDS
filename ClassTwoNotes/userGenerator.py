@@ -17,7 +17,11 @@ for j in range(10000):
 
     for i in range(num_favorites):
         #the actual favorites are also drawn from a long tail
-        fav_id = (1+int(round(random.lognormvariate(4, 5))))%50000 
+        fav_id = 0
+        while True:            
+            fav_id = (1+int(round(random.lognormvariate(4, 5))))%50000 
+            if fav_id != 0:
+                break
         u.addFavorite(fav_id)
         
     #a long-tailed number of friends
@@ -26,14 +30,22 @@ for j in range(10000):
 
     for i in range(num_friends):
         #long-tailed distribution on friends
-        friend_id = (1+int(round(random.lognormvariate(4, 5))))%10000
+        friend_id = 0
+        while True:
+            friend_id = (1+int(round(random.lognormvariate(4, 5))))%10000
+            if friend_id != 0:
+                break
         u.addFriend(friend_id)
 
     #long-tailed number of purchases
     num_purchases = int(round(random.lognormvariate(d/2, .1))) - 2
 
     for i in range(num_purchases):
-        purch_id = (1+int(round(random.lognormvariate(4, 4.5))))%50000
+        pruch_id = 0
+        while True:
+            purch_id = (1+int(round(random.lognormvariate(4, 4.5))))%50000
+            if purch_id != :
+                break
         u.addPurchase(purch_id)
 
     
