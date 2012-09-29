@@ -1,14 +1,14 @@
 import json
 
 class User:
-    def __init__(self, id, name, email, gender = "", favorites = set(), purchases = [], friends = set()):
+    def __init__(self, id, name, email, gender = "", favorites = None, purchases = None, friends = None):
         self.id = id
         self.name = name
         self.email = email
         self.gender = gender
-        self.favorites = favorites
-        self.purchases = purchases
-        self.friends = friends
+        self.favorites = favorites if favorites != None else set()
+        self.purchases = purchases if purchases != None else []
+        self.friends = friends if friends != None else set()
 
     def addFavorite(self, favorite):
         self.favorites.add(favorite)
