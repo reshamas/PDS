@@ -44,7 +44,7 @@ for j in range(10000):
         pruch_id = 0
         while True:
             purch_id = (1+int(round(random.lognormvariate(4, 4.5))))%50000
-            if purch_id != :
+            if purch_id != 0:
                 break
         u.addPurchase(purch_id)
 
