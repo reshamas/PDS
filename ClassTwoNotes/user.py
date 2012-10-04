@@ -31,4 +31,4 @@ class SetEncoder(json.JSONEncoder):
 
 def fromJson(json_string):
     json_map = json.loads(json_string)
-    return User(json_map["id"], json_map["name"], json_map["email"], set(json_map["favorites"]), json_map["purchases"], set(json_map["friends"]))
+    return User(json_map["id"], json_map["name"], json_map["email"], json_map["gender"], set(json_map["favorites"]), json_map["purchases"], set(json_map["friends"]))
