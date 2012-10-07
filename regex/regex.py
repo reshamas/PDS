@@ -45,10 +45,10 @@ def getBullets(response):
 
 
 url = "http://people.stern.nyu.edu/mk3539/pytutorial.html"
-#page = getPage(url)
-#bull = getBullets(page)
-#for row in bull:
-#    print row
+page = getPage(url)
+bull = getBullets(page)
+for row in bull:
+    print row
 
     
 #Other regular expressions examples:
