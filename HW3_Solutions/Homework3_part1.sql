@@ -5,7 +5,7 @@ SELECT count(*)
 FROM shops;
 #80235
 
-#What is the average price over all listings? What is the average “price” across all transactions?
+#What is the average price over all listings? What is the average ï¿½priceï¿½ across all transactions?
 SELECT avg(price) 
 FROM listings;
 #2.6321
@@ -113,7 +113,3 @@ SELECT gender, count(distinct u.user_id)
 FROM users u, transactions t 
 WHERE u.user_id = t.user_id
 GROUP BY gender;
-#		12
-#	female	2670
-#	male	166
-#	private	2239
