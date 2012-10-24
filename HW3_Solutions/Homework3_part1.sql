@@ -5,7 +5,7 @@ SELECT count(*)
 FROM shops;
 #80235
 
-#What is the average price over all listings? What is the average �price� across all transactions?
+#What is the average price over all listings? What is the average "price" across all transactions?
 SELECT avg(price) 
 FROM listings;
 #2.6321
